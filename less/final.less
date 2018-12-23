@@ -1,0 +1,354 @@
+/* VARIABLES */
+
+@red: #ef5350;
+@pink:  #ec407a;
+@purple: #ab47bc;
+@deep-purple: #7e57c2;
+@indigo: #5c6bc0;
+@blue: #42a5f5;
+@light-blue: #29b6f6;
+@cyan: #26C6DA;
+@teal: #26A69A;
+@green: #66BB6A;
+@light-green: #9CCC65;
+@lime: #D4E157;
+@yellow: #FFEE58;
+@amber: #FFCA28;
+@orange: #FFA726;
+@deep-orange: #FF7043;
+@brown: #8D6E63;
+@grey: #BDBDBD;
+@black: #212121;
+@white: #F5F5F5;
+@blue-grey: #78909C;
+
+@transparent: rgba(0, 0, 0, 0);
+
+/* BUTTONS */
+
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.button(@color: @black) {
+    .border-radius(20px);
+    padding: 2vh 3vw;
+    border: none;
+
+    background-color: @color;
+
+    color: @white;
+
+    transition: background-color 250ms;
+
+    &:hover {
+        background-color: darken(@color, 10%)
+    }
+}
+
+.button-primary {
+    .button(@blue);
+}
+
+.button-secondary {
+    .button(@blue-grey);
+}
+
+.button-success {
+    .button(@green);
+}
+
+.button-danger {
+    .button(@red);
+}
+
+.button-warning {
+    .button(@yellow);
+    color: @black;
+}
+
+.button-info {
+    .button(@teal);
+}
+
+.button-light {
+    .button(@white);
+    color: @black;
+}
+
+.button-dark {
+    .button(@black);
+    color: @white;
+}
+
+.button-link {
+    .button(@white);
+    color: @blue;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* OUTLINE BUTTONS */
+
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.button-out(@color) {
+    .border-radius(20px);
+    border: 2px solid @color;
+    color: @color;
+    background-color: @transparent;
+    padding: 2vh 3vw;
+
+    transition: background-color 250ms, color 250ms;
+
+    &:hover {
+        background-color: @color;
+        color: @white;
+    }
+}
+
+.button-out-primary {
+    .button-out(@blue);
+}
+
+.button-out-secondary {
+    .button-out(@blue-grey);
+}
+
+.button-out-success {
+    .button-out(@green);
+}
+
+.button-out-danger {
+    .button-out(@red);
+}
+
+.button-out-warning {
+    .button-out(@yellow);
+    color: @black;
+
+    &:hover {
+        color: @black;
+    }
+}
+
+.button-out-info {
+    .button-out(@teal);
+}
+
+.button-out-light {
+    .button-out(@black);
+    color: @black;
+    background-color: @transparent;
+
+    &:hover {
+        color: @black;
+        background-color: @transparent;
+    }
+}
+
+.button-out-dark {
+    .button-out(@black);
+}
+
+/* BACKGROUND COLORS */
+
+.bg-red {
+    background-color: @red;
+}
+
+.bg-pink {
+    background-color: @pink;
+}
+
+.bg-purple {
+    background-color: @purple;
+}
+
+.bg-deep-purple {
+    background-color: @deep-purple;
+}
+
+.bg-indigo {
+    background-color: @indigo;
+}
+
+.bg-blue {
+    background-color: @blue;
+}
+
+.bg-light-blue {
+    background-color: @light-blue;
+}
+
+.bg-cyan {
+    background-color: @cyan;
+}
+
+.bg-teal {
+    background-color: @teal;
+}
+
+.bg-green {
+    background-color: @green;
+}
+
+.bg-light-green {
+    background-color: @light-green;
+}
+
+.bg-lime {
+    background-color: @lime;
+}
+
+.bg-yellow {
+    background-color: @yellow;
+}
+
+.bg-amber {
+    background-color: @amber;
+}
+
+.bg-orange {
+    background-color: @orange;
+}
+
+.bg-deep-orange {
+    background-color: @deep-orange;
+}
+
+.bg-brown {
+    background-color: @brown;
+}
+
+.bg-grey {
+    background-color: @grey;
+}
+
+.bg-black {
+    background-color: @black;
+}
+
+.bg-white {
+    background-color: @white;
+}
+
+.bg-blue-grey {
+    background-color: @blue-grey;
+}
+
+/* COLORS */
+
+.red {
+    color: @red;
+}
+
+.pink {
+    color: @pink;
+}
+
+.purple {
+    color: @purple;
+}
+
+.deep-purple {
+    color: @deep-purple;
+}
+
+.indigo {
+    color: @indigo;
+}
+
+.blue {
+    color: @blue;
+}
+
+.light-blue {
+    color: @light-blue;
+}
+
+.cyan {
+    color: @cyan;
+}
+
+.teal {
+    color: @teal;
+}
+
+.green {
+    color: @green;
+}
+
+.light-green {
+    color: @light-green;
+}
+
+.lime {
+    color: @lime;
+}
+
+.yellow {
+    color: @yellow;
+}
+
+.amber {
+    color: @amber;
+}
+
+.orange {
+    color: @orange;
+}
+
+.deep-orange {
+    color: @deep-orange;
+}
+
+.brown {
+    color: @brown;
+}
+
+.grey {
+    color: @grey;
+}
+
+.black {
+    color: @black;
+}
+
+.white {
+    color: @white;
+}
+
+.blue-grey {
+    color: @blue-grey;
+}
+
+/* CONFIG */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.viewport {
+    height: 100vh;
+    width: 100%;
+}
